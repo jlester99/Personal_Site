@@ -1,0 +1,654 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9471DEE2-D8A5-46FF-B263-A780196D9459}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PersonalSite</RootNamespace>
+    <AssemblyName>PersonalSite</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.html" />
+    <Content Include="about.html" />
+    <Content Include="contact.html" />
+    <Content Include="courses.html" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="elearning-1.0.0\404.html" />
+    <Content Include="elearning-1.0.0\about.html" />
+    <Content Include="elearning-1.0.0\contact.html" />
+    <Content Include="elearning-1.0.0\courses.html" />
+    <Content Include="elearning-1.0.0\css\bootstrap.min.css" />
+    <Content Include="elearning-1.0.0\css\style.css" />
+    <Content Include="elearning-1.0.0\elearning-html-template.jpg" />
+    <Content Include="elearning-1.0.0\img\about.jpg" />
+    <Content Include="elearning-1.0.0\img\carousel-1.jpg" />
+    <Content Include="elearning-1.0.0\img\carousel-2.jpg" />
+    <Content Include="elearning-1.0.0\img\cat-1.jpg" />
+    <Content Include="elearning-1.0.0\img\cat-2.jpg" />
+    <Content Include="elearning-1.0.0\img\cat-3.jpg" />
+    <Content Include="elearning-1.0.0\img\cat-4.jpg" />
+    <Content Include="elearning-1.0.0\img\course-1.jpg" />
+    <Content Include="elearning-1.0.0\img\course-2.jpg" />
+    <Content Include="elearning-1.0.0\img\course-3.jpg" />
+    <Content Include="elearning-1.0.0\img\team-1.jpg" />
+    <Content Include="elearning-1.0.0\img\team-2.jpg" />
+    <Content Include="elearning-1.0.0\img\team-3.jpg" />
+    <Content Include="elearning-1.0.0\img\team-4.jpg" />
+    <Content Include="elearning-1.0.0\img\testimonial-1.jpg" />
+    <Content Include="elearning-1.0.0\img\testimonial-2.jpg" />
+    <Content Include="elearning-1.0.0\img\testimonial-3.jpg" />
+    <Content Include="elearning-1.0.0\img\testimonial-4.jpg" />
+    <Content Include="elearning-1.0.0\index.html" />
+    <Content Include="elearning-1.0.0\js\main.js" />
+    <Content Include="elearning-1.0.0\lib\animate\animate.css" />
+    <Content Include="elearning-1.0.0\lib\animate\animate.min.css" />
+    <Content Include="elearning-1.0.0\lib\easing\easing.js" />
+    <Content Include="elearning-1.0.0\lib\easing\easing.min.js" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="elearning-1.0.0\lib\waypoints\links.php" />
+    <Content Include="elearning-1.0.0\lib\waypoints\waypoints.min.js" />
+    <Content Include="elearning-1.0.0\lib\wow\wow.js" />
+    <Content Include="elearning-1.0.0\lib\wow\wow.min.js" />
+    <Content Include="elearning-1.0.0\LICENSE.txt" />
+    <Content Include="elearning-1.0.0\READ-ME.txt" />
+    <Content Include="elearning-1.0.0\team.html" />
+    <Content Include="elearning-1.0.0\testimonial.html" />
+    <Content Include="elearning-html-template.jpg" />
+    <Content Include="img\about.jpg" />
+    <Content Include="img\carousel-1.jpg" />
+    <Content Include="img\carousel-2.jpg" />
+    <Content Include="img\cat-1.jpg" />
+    <Content Include="img\cat-2.jpg" />
+    <Content Include="img\cat-3.jpg" />
+    <Content Include="img\cat-4.jpg" />
+    <Content Include="img\course-1.jpg" />
+    <Content Include="img\course-2.jpg" />
+    <Content Include="img\course-3.jpg" />
+    <Content Include="img\team-1.jpg" />
+    <Content Include="img\team-2.jpg" />
+    <Content Include="img\team-3.jpg" />
+    <Content Include="img\team-4.jpg" />
+    <Content Include="img\testimonial-1.jpg" />
+    <Content Include="img\testimonial-2.jpg" />
+    <Content Include="img\testimonial-3.jpg" />
+    <Content Include="img\testimonial-4.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\main.js" />
+    <Content Include="lib\animate\animate.css" />
+    <Content Include="lib\animate\animate.min.css" />
+    <Content Include="lib\easing\easing.js" />
+    <Content Include="lib\easing\easing.min.js" />
+    <Content Include="lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="lib\owlcarousel\owl.carousel.js" />
+    <Content Include="lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="lib\waypoints\links.php" />
+    <Content Include="lib\waypoints\waypoints.min.js" />
+    <Content Include="lib\wow\wow.js" />
+    <Content Include="lib\wow\wow.min.js" />
+    <Content Include="LICENSE.txt" />
+    <Content Include="READ-ME.txt" />
+    <Content Include="team.html" />
+    <Content Include="testimonial.html" />
+    <Content Include="Web.config" />
+    <Content Include="_Archive\404.html" />
+    <Content Include="_Archive\about.html" />
+    <Content Include="_Archive\contact.html" />
+    <Content Include="_Archive\courses.html" />
+    <Content Include="_Archive\css\bootstrap.min.css" />
+    <Content Include="_Archive\css\style.css" />
+    <Content Include="_Archive\elearning-1.0.0\404.html" />
+    <Content Include="_Archive\elearning-1.0.0\about.html" />
+    <Content Include="_Archive\elearning-1.0.0\contact.html" />
+    <Content Include="_Archive\elearning-1.0.0\courses.html" />
+    <Content Include="_Archive\elearning-1.0.0\css\bootstrap.min.css" />
+    <Content Include="_Archive\elearning-1.0.0\css\style.css" />
+    <Content Include="_Archive\elearning-1.0.0\elearning-html-template.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\about.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\carousel-1.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\carousel-2.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\cat-1.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\cat-2.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\cat-3.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\cat-4.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\course-1.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\course-2.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\course-3.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\team-1.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\team-2.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\team-3.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\team-4.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\testimonial-1.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\testimonial-2.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\testimonial-3.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\img\testimonial-4.jpg" />
+    <Content Include="_Archive\elearning-1.0.0\index.html" />
+    <Content Include="_Archive\elearning-1.0.0\js\main.js" />
+    <Content Include="_Archive\elearning-1.0.0\lib\animate\animate.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\animate\animate.min.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\easing\easing.js" />
+    <Content Include="_Archive\elearning-1.0.0\lib\easing\easing.min.js" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="_Archive\elearning-1.0.0\lib\waypoints\links.php" />
+    <Content Include="_Archive\elearning-1.0.0\lib\waypoints\waypoints.min.js" />
+    <Content Include="_Archive\elearning-1.0.0\lib\wow\wow.js" />
+    <Content Include="_Archive\elearning-1.0.0\lib\wow\wow.min.js" />
+    <Content Include="_Archive\elearning-1.0.0\LICENSE.txt" />
+    <Content Include="_Archive\elearning-1.0.0\READ-ME.txt" />
+    <Content Include="_Archive\elearning-1.0.0\team.html" />
+    <Content Include="_Archive\elearning-1.0.0\testimonial.html" />
+    <Content Include="_Archive\elearning-html-template.jpg" />
+    <Content Include="_Archive\img\about.jpg" />
+    <Content Include="_Archive\img\carousel-1.jpg" />
+    <Content Include="_Archive\img\carousel-2.jpg" />
+    <Content Include="_Archive\img\cat-1.jpg" />
+    <Content Include="_Archive\img\cat-2.jpg" />
+    <Content Include="_Archive\img\cat-3.jpg" />
+    <Content Include="_Archive\img\cat-4.jpg" />
+    <Content Include="_Archive\img\course-1.jpg" />
+    <Content Include="_Archive\img\course-2.jpg" />
+    <Content Include="_Archive\img\course-3.jpg" />
+    <Content Include="_Archive\img\team-1.jpg" />
+    <Content Include="_Archive\img\team-2.jpg" />
+    <Content Include="_Archive\img\team-3.jpg" />
+    <Content Include="_Archive\img\team-4.jpg" />
+    <Content Include="_Archive\img\testimonial-1.jpg" />
+    <Content Include="_Archive\img\testimonial-2.jpg" />
+    <Content Include="_Archive\img\testimonial-3.jpg" />
+    <Content Include="_Archive\img\testimonial-4.jpg" />
+    <Content Include="_Archive\index.html" />
+    <Content Include="_Archive\js\main.js" />
+    <Content Include="_Archive\lib\animate\animate.css" />
+    <Content Include="_Archive\lib\animate\animate.min.css" />
+    <Content Include="_Archive\lib\easing\easing.js" />
+    <Content Include="_Archive\lib\easing\easing.min.js" />
+    <Content Include="_Archive\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="_Archive\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="_Archive\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="_Archive\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="_Archive\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="_Archive\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="_Archive\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="_Archive\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="_Archive\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="_Archive\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="_Archive\lib\waypoints\links.php" />
+    <Content Include="_Archive\lib\waypoints\waypoints.min.js" />
+    <Content Include="_Archive\lib\wow\wow.js" />
+    <Content Include="_Archive\lib\wow\wow.min.js" />
+    <Content Include="_Archive\LICENSE.txt" />
+    <Content Include="_Archive\READ-ME.txt" />
+    <Content Include="_Archive\team.html" />
+    <Content Include="_Archive\testimonial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include="elearning-1.0.0\.gitattributes" />
+    <Content Include="elearning-1.0.0\lib\owlcarousel\LICENSE" />
+    <Content Include="elearning-1.0.0\scss\bootstrap.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_card.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_close.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_containers.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_images.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_root.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_type.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="elearning-1.0.0\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="lib\owlcarousel\LICENSE" />
+    <None Include="packages.config" />
+    <Content Include="scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="scss\bootstrap\scss\_alert.scss" />
+    <Content Include="scss\bootstrap\scss\_badge.scss" />
+    <Content Include="scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="scss\bootstrap\scss\_card.scss" />
+    <Content Include="scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="scss\bootstrap\scss\_close.scss" />
+    <Content Include="scss\bootstrap\scss\_containers.scss" />
+    <Content Include="scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="scss\bootstrap\scss\_forms.scss" />
+    <Content Include="scss\bootstrap\scss\_functions.scss" />
+    <Content Include="scss\bootstrap\scss\_grid.scss" />
+    <Content Include="scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="scss\bootstrap\scss\_images.scss" />
+    <Content Include="scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="scss\bootstrap\scss\_modal.scss" />
+    <Content Include="scss\bootstrap\scss\_nav.scss" />
+    <Content Include="scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="scss\bootstrap\scss\_popover.scss" />
+    <Content Include="scss\bootstrap\scss\_progress.scss" />
+    <Content Include="scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="scss\bootstrap\scss\_root.scss" />
+    <Content Include="scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="scss\bootstrap\scss\_tables.scss" />
+    <Content Include="scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="scss\bootstrap\scss\_type.scss" />
+    <Content Include="scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="scss\bootstrap\scss\_variables.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_Archive\.gitattributes" />
+    <Content Include="_Archive\elearning-1.0.0\.gitattributes" />
+    <Content Include="_Archive\elearning-1.0.0\lib\owlcarousel\LICENSE" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_card.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_close.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_containers.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_images.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_root.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_type.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="_Archive\elearning-1.0.0\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="_Archive\lib\owlcarousel\LICENSE" />
+    <Content Include="_Archive\scss\bootstrap.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_card.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_close.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_containers.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_images.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_root.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_type.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="_Archive\scss\bootstrap\scss\_variables.scss" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50702</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50702/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
