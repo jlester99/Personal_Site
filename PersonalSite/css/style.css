@@ -27,10 +27,11 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #52565b;
-    background-color: lightslategray;
+    /*color: #52565b;*/
+    background-color: paleturquoise;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: indigo;
 }
 
 /*** Spinner ***/
@@ -117,7 +118,7 @@ body {
     margin-right: 30px;
     padding: 25px 0;
     color: #FFFFFF;
-    font-size: 15px;
+    font-size: 20px;
     text-transform: uppercase;
     outline: none;
 }
@@ -140,7 +141,8 @@ body {
 
 .navbar-light .navbar-brand,
 .navbar-light a.btn {
-    height: 75px;
+    height: 65px;
+    width: auto;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -175,6 +177,11 @@ body {
         transition: .5s;
         opacity: 1;
     }
+}
+
+.navbar .gradLogo {
+    height: 65px;
+    width: 75px;
 }
 
 
@@ -378,7 +385,7 @@ owl-carousel .header-carousel {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .9;
-    min-height: 450px;
+    height: 450px;
 }
 
 .about-header {
@@ -386,16 +393,29 @@ owl-carousel .header-carousel {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .8;
-    min-height: 450px;
+    height: 450px;
 }
 
 .portfolio-header {
-    background-image: url('../img/color laptop.jpg');
+    /*background-image: url('../img/cogwheels 776_1280.jpg');*/
+    background-image: url('../img/network-gdf6808c33_1920.jpg');
+    /*background-image: url('../img/color laptop.jpg');*/
+    background-image: url('../img/laura-ockel-UQ2Fw_9oApU-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: gray;
     opacity: .6;
-    min-height: 450px;
+    height: 450px;
+    font-weight: 900;
+}
+
+.resume-header {
+    background-image: url('../img/building blocks 2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+    opacity: .6;
+    height: 450px;
     font-weight: 900;
 }
 
@@ -406,81 +426,6 @@ owl-carousel .header-carousel {
 
 
 
-/*/*** Testimonials ***/
-.testimonial-carousel::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.testimonial-carousel::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@media (min-width: 768px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
-
-@media (min-width: 992px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
-}
-
-.testimonial-carousel .owl-item .testimonial-text,
-.testimonial-carousel .owl-item.center .testimonial-text * {
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text {
-    background: var(--primary) !important;
-}
-
-    .testimonial-carousel .owl-item.center .testimonial-text * {
-        color: #FFFFFF !important;
-    }
-
-.testimonial-carousel .owl-dots {
-    margin-top: 24px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.testimonial-carousel .owl-dot {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #CCCCCC;
-    transition: .5s;
-}
-
-    .testimonial-carousel .owl-dot.active {
-        background: var(--primary);
-        border-color: var(--primary);
-    }
-
-.testimonial-item img {
-    max-width: 60%;
-}
 
 .btn.download-btn {
 }
@@ -507,10 +452,10 @@ owl-carousel .header-carousel {
     background-repeat: no-repeat;
 }
 
-.owl-carousel .owl-item img {
+/*.owl-carousel .owl-item img {
     width: auto;
     height: 100%;
-}
+}*/
 
 
 /*** Footer ***/
@@ -706,6 +651,10 @@ owl-carousel .header-carousel {
     font-weight: 800;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height:100px;
+}
+
+.text-primary {
+    color: indigo !important;
 }
 
 

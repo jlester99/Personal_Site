@@ -87,11 +87,31 @@
     <Content Include="css\product.css" />
     <Content Include="css\product_responsive.css" />
     <Content Include="css\responsive.css" />
+    <Content Include="css\resume.css" />
     <Content Include="css\slick-theme.css" />
     <Content Include="css\slick-theme.min.css" />
     <Content Include="css\slick.min.css" />
     <Content Include="css\templatemo.css" />
     <Content Include="css\templatemo.min.css" />
+    <Content Include="img\building blocks 2.jpg" />
+    <Content Include="img\cogwheels 776_1280.jpg" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\building blocks.png" />
+    <Content Include="img\laura-ockel-UQ2Fw_9oApU-unsplash.jpg" />
+    <Content Include="img\network-gdf6808c33_1920.jpg" />
+    <Content Include="img\Resume Header.png" />
+    <Content Include="js\main2.js" />
+    <Content Include="lib\isotope\isotope.pkgd.js" />
+    <Content Include="lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="lib\lightbox\css\lightbox.css" />
+    <Content Include="lib\lightbox\css\lightbox.min.css" />
+    <Content Include="lib\lightbox\images\close.png" />
+    <Content Include="lib\lightbox\images\loading.gif" />
+    <Content Include="lib\lightbox\images\next.png" />
+    <Content Include="lib\lightbox\images\prev.png" />
+    <Content Include="lib\lightbox\js\lightbox.js" />
+    <Content Include="lib\lightbox\js\lightbox.min.js" />
+    <Content Include="lib\lightbox\links.php" />
     <Content Include="resume.html" />
     <Content Include="img\Andrew Allen.jpg" />
     <Content Include="img\arrow_r.png" />
@@ -271,7 +291,6 @@
     <Content Include="LICENSE.txt" />
     <Content Include="READ-ME.txt" />
     <Content Include="classmates.html" />
-    <Content Include="testimonial.html" />
     <Content Include="Web.config" />
     <Content Include="_Archive\404.html" />
     <Content Include="_Archive\about.html" />
@@ -370,6 +389,7 @@
     <Content Include="_Archive\lib\wow\wow.min.js" />
     <Content Include="_Archive\LICENSE.txt" />
     <Content Include="_Archive\READ-ME.txt" />
+    <Content Include="_Archive\resume.html" />
     <Content Include="_Archive\team.html" />
     <Content Include="_Archive\testimonial.html" />
   </ItemGroup>
