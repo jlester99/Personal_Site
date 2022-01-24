@@ -293,6 +293,7 @@ body {
 .service-item {
     background: var(--light);
     transition: .5s;
+    min-height: 300px;
 }
 
     .service-item:hover {
@@ -323,6 +324,8 @@ body {
 
     .service-item ul {
         list-style: none;
+        min-height: 100px;
+
     }
 
 .service-list li {
@@ -330,6 +333,7 @@ body {
     text-align: start;
     padding-left: 10%;
     padding-right: 10%;
+    font-size: 1.2rem;
 }
 
 /*.service-item:hover .overlay {
@@ -404,7 +408,7 @@ owl-carousel .header-carousel {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: gray;
-    opacity: .6;
+    opacity: .8;
     height: 450px;
     font-weight: 900;
 }
@@ -556,7 +560,6 @@ owl-carousel .header-carousel {
 
 .grid li {
     display: inline-block;
-    width: 725px;
     margin: 0;
     padding: 20px;
     text-align: left;
@@ -580,6 +583,7 @@ owl-carousel .header-carousel {
         padding: 20px;
         /*background-image: url('../img/Pawsitive Vibes.png');*/
         background: darkslateblue;
+        background: teal;
         color: aliceblue;
     }
 
@@ -613,7 +617,7 @@ owl-carousel .header-carousel {
 
 .cs-style-1 figure:hover figcaption,
 .cs-style-1 figure.cs-hover figcaption {
-    opacity: .8;
+    opacity: .9;
     transform: translate(15px, 15px);
 }
 

@@ -210,6 +210,12 @@
             font-size: 16px;
         }
 
+        .experience-list li {
+            list-style-image: url('../img/bullet_point_image_teal.png');
+            text-align: start;
+            padding-left: 5%;
+        }
+
 @media (max-width: 767.98px) {
     .experience .timeline::after {
         left: 8px;
