@@ -399,6 +399,13 @@ owl-carousel .header-carousel {
     opacity: .8;
     height: 450px;
 }
+.contact-header {
+    background-image: url('../img/Contact2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+    height: 450px;
+}
 
 .portfolio-header {
     /*background-image: url('../img/cogwheels 776_1280.jpg');*/
@@ -456,11 +463,10 @@ owl-carousel .header-carousel {
     background-repeat: no-repeat;
 }
 
-/*.owl-carousel .owl-item img {
-    width: auto;
-    height: 100%;
-}*/
-
+.header-carousel .owl-prev, .owl-next {
+    border-radius: 50%;
+    color: paleturquoise;
+}
 
 /*** Footer ***/
 .footer .btn.btn-social {
@@ -475,6 +481,13 @@ owl-carousel .header-carousel {
     border: 1px solid #FFFFFF;
     border-radius: 35px;
     transition: .3s;
+}
+.footer p {
+    color: white !important;
+}
+
+.footer h4 {
+    margin-bottom: 3px;
 }
 
 .footer .align-ctr {
@@ -492,7 +505,6 @@ owl-carousel .header-carousel {
     padding: 0;
     text-align: left;
     color: #FFFFFF;
-    font-size: 15px;
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
@@ -513,7 +525,7 @@ owl-carousel .header-carousel {
 
 .footer .copyright {
     padding: 25px 0;
-    font-size: 15px;
+    font-size: 12px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
 
@@ -627,6 +639,7 @@ owl-carousel .header-carousel {
 
 .cs-style-1 figcaption span {
     display: block;
+    font-size: small;
 }
 
 .cs-style-1 figcaption a {
@@ -635,7 +648,7 @@ owl-carousel .header-carousel {
 
 @media screen and (max-width: 31.5em) {
     .grid {
-        padding: 10px 10px 100px 10px;
+        padding: 10px 10px 20px 10px;
     }
 
         .grid li {
@@ -661,8 +674,8 @@ owl-carousel .header-carousel {
     color: indigo !important;
 }
 
-
-
 /*.navbar p img {
-    background: transparent;*/
-}
+    background: transparent;
+}*/
+
+

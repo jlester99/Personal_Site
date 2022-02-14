@@ -312,7 +312,7 @@
 
     .testimonial .testimonial-text {
         position: relative;
-        margin-top: -70px;
+        /*margin-top: -70px;*/
         padding: 65px 35px 30px 35px;
         text-align: center;
         background: #ffffff;

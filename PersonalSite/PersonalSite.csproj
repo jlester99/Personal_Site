@@ -94,11 +94,16 @@
     <Content Include="css\templatemo.css" />
     <Content Include="css\templatemo.min.css" />
     <Content Include="img\building blocks 2.jpg" />
+    <Content Include="img\Cobol %282%29.png" />
+    <Content Include="img\Cobol standard.jpeg" />
     <Content Include="img\cogwheels 776_1280.jpg" />
+    <Content Include="img\Contact.png" />
+    <Content Include="img\Contact2.png" />
     <Content Include="img\dog breeds.jpg" />
     <Content Include="img\favicon.ico" />
     <Content Include="img\building blocks.png" />
     <Content Include="img\laura-ockel-UQ2Fw_9oApU-unsplash.jpg" />
+    <Content Include="img\multi products_ccexpress.png" />
     <Content Include="img\network-gdf6808c33_1920.jpg" />
     <Content Include="img\Resume Header.png" />
     <Content Include="img\Zombie Slayer.png" />
